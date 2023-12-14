@@ -209,7 +209,8 @@ class JenkinsSlave < Formula
     STRING
   end
 
-  service.require_root startup: true
+  @plist_startup = true
+  #plist_options startup: true
 
   test do
     test_url = "http://example.com/jenkins"
